@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Muchin Kids - Toshkentdagi bolalar bog'chasi. Farzandingiz uchun mehrli, xavfsiz va rivojlantiruvchi makon." />
+  <title>Muchin Kids - Bolalar Bog'chasi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comfortaa', cursive, Arial, sans-serif;
+      background: #e3f2fd;
+      color: #333;
+    }
+    header {
+      background: #26a69a;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      margin: 0.3rem 0 0;
+      font-size: 1.1rem;
+    }
+    nav {
+      background: #00796b;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #004d40;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #00796b;
+      border-bottom: 3px solid #26a69a;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    .gallery {
+      position: relative;
+      max-width: 100%;
+      height: 220px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      border-radius: 12px;
+    }
+    .gallery img.active {
+      opacity: 1;
+      position: relative;
+    }
+    ul.services-list {
+      list-style: square inside;
+      font-size: 1.1rem;
+      color: #004d40;
+    }
+    ul.services-list li {
+      margin-bottom: 0.8rem;
+    }
+    form {
+      max-width: 400px;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.7rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #26a69a;
+      border-radius: 8px;
+      resize: none;
+      font-family: 'Comfortaa', cursive, Arial, sans-serif;
+    }
+    input:focus, textarea:focus {
+      border-color: #00796b;
+      outline: none;
+    }
+    button {
+      background: #00796b;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #004d40;
+    }
+    footer {
+      background: #26a69a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-weight: 600;
+    }
+    a {
+      color: #00796b;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #004d40;
+    }
+    #formMessage {
+      color: green;
+      margin-top: 1rem;
+      display: none;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .gallery {
+        height: 180px;
+      }
+      .gallery img {
+        height: 180px;
+      }
+      main {
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Muchin Kids</h1>
+    <p>Farzandingiz kelajagini biz bilan boshlang!</p>
+  </header>
+
+  <nav>
+    <a href="#about">Biz haqimizda</a>
+    <a href="#services">Xizmatlar</a>
+    <a href="#gallery">Galereya</a>
+    <a href="#contact">Bog'lanish</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>Biz haqimizda</h2>
+      <p>Muchin Kids bolalar bog'chasi — bu mehr, e'tibor va rivojlanishga yo‘naltirilgan makon. Bolajonlar uchun qulay, xavfsiz va o‘rgatuvchi muhit yaratamiz.</p>
+    </section>
+
+    <section id="services">
+      <h2>Xizmatlar</h2>
+      <ul class="services-list">
+        <li>3–6 yoshdagi bolalar uchun guruhlar</li>
+        <li>O‘yinlar orqali o‘rganish</li>
+        <li>To‘g‘ri ovqatlanish va uyqu tartibi</li>
+        <li>Malakali tarbiyachilar va o‘qituvchilar</li> 
+        <li>Malakali til o'qituvchilar</li>
+        <li>Qulay sharoitlar</li>
+      </ul>
+    </section>
+
+    <section id="gallery" class="gallery" aria-label="Galereya">
+      <img src="https://images.pexels.com/photos/1449934/pexels-photo-1449934.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bolalar rasmi 1" class="active" />
+      <img src="https://media.istockphoto.com/id/1916612837/photo/science-portrait-and-group-of-children-with-happiness-at-convention-expo-or-exhibition-for.jpg?b=1&s=612x612&w=0&k=20&c=9vGsC16GdYsY4tYojYMjQe6kwFoMR_xl3Sshg92LjzY=" />
+      <img src="https://images.pexels.com/photos/265987/pexels-photo-265987.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bolalar rasmi 3" />
+    </section>
+
+    <section id="contact">
+      <h2>Bog'lanish</h2>
+      <p><strong>Telefon:</strong> <a href="tel:+998886333311">+998 (88) 633-33-11</a></p>
+      <p><strong>Manzil:</strong> Qashqadaryo viloyati, Yakkabog' tumani, Do'stlik MFY Muchin qishloq 186 uy</p>
+      <p><strong>Email:</strong> <a href="mailto:mmka72038@gmail.com">mmka72038@gmail.com</a></p>
+      <p>
+        <strong>Ijtimoiy tarmoqlar:</strong><br/>
+        <a href="https://t.me/mrcomron" target="_blank">@mrcomron</a> |
+        <a href="https://instagram.com/mrcomron" target="_blank">@mrcomron</a>
+      </p>
+
+      <form id="contactForm" novalidate>
+        <input type="text" id="name" name="name" placeholder="Ismingiz" required minlength="2" />
+        <input type="tel" id="phone" name="phone" placeholder="Telefon raqamingiz" required pattern="\+998[\s\-]?\d{2}[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}" />
+        <textarea id="message" name="message" placeholder="Xabaringiz" rows="4" required minlength="5"></textarea>
+        <button type="submit">Yuborish</button>
+      </form>
+
+      <p id="formMessage">Xabaringiz uchun rahmat! Tez orada bog'lanamiz.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Muchin Kids. Barcha huquqlar himoyalangan.
+  </footer>
+
+  <script>
+    const images = document.querySelectorAll('.gallery img');
+    let currentIndex = 0;
+
+    function showNextImage() {
+      images[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active');
+    }
+    setInterval(showNextImage, 4000);
+
+    const BOT_TOKEN = '8191418263:AAG4umvtsCCNt-DFigx7_UbJtFZFDFAsQKw'; // Sizning bot tokeningiz
+    const CHAT_ID = '5576989626'; // Sizning Telegram chat IDingiz
+
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    formMessage.style.display = 'none';
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        alert('Iltimos, barcha maydonlarni to‘g‘ri to‘ldiring.');
+        return;
+      }
+
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const text = `🆕 *Yangi xabar* \n\n` +
+                   `👤 Ism: ${name}\n` +
+                   `📞 Telefon: ${phone}\n` +
+                   `💬 Xabar: ${message}`;
+
+      // Telegramga xabar yuborish uchun URL (Bot API)
+      const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: text,
+            parse_mode: 'Markdown'
+          })
+        });
+
+        const result = await response.json();
+
+        if (result.ok) {
+          formMessage.style.display = 'block';
+          form.reset();
+          setTimeout(() => {
+            formMessage.style.display = 'none';
+          }, 6000);
+        } else {
+          alert('Xabar yuborishda xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko‘ring.');
+        }
+      } catch (error) {
+        alert('Xabar yuborishda xatolik yuz berdi. Iltimos, internet ulanishini tekshiring.');
+        console.error(error);
+      }
+    });
+  </script>
+</body>
+</html>
